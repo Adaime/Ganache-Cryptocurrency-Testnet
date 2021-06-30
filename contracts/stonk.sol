@@ -3,10 +3,12 @@ pragma solidity >=0.4.22 <0.9.0;
 contract stonk {
 
     uint public totalSupply;
-    constructor() public {
-        totalSupply = 1000000000000000;
-         // It is better to initialize the old variable
+
+    mapping(address => uint) public balanceOf;
+
+    constructor(uint _initialSupply) public {
+        totalSupply = _initialSupply;
+        // allocate the initial supply
     }
 }
 
-//function totalSupply() public view returns (uint256)
